@@ -1,0 +1,35 @@
+#----------Python 3.7--------------
+
+# 利用pandas绘图,可利用series.plot()或dataframe.plot()
+# DataFrame绘图，则其每个column都为一个绘图图线
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# hist
+data = pd.read_csv('data.csv')
+data.hist(bins=50,figsize=(20,15))
+plt.show()
+
+# subplot
+fig, (axis1,axis2) = plt.subplots(1,2,figsize=(15,5))
+data['Age'].plot(kind='hist', bins=70, ax=axis1)
+data['Age'].plot(kind='hist', bins=70, ax=axis2)
+plt.show()
+
+# 线型图
+series.plot(linestyle='dashed', color='k', marker='o')
+plt.show()
+
+# 柱状图
+# 加入kind=’bar’（垂直柱状图）或kind=’barh’（水平柱状图）
+df.plot(kind='bar')
+
+# 箱线图
+df.plot.box()
+
+# 散点图
+df.plot.scatter(x='a', y='b')
+
+# 饼图
+df.plot.pie(subplots=True, figsize=(8, 4))
