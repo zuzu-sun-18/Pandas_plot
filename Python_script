@@ -30,6 +30,12 @@ df.plot.box()
 
 # 散点图
 df.plot.scatter(x='a', y='b')
+or
+df.plot(kind="scatter",x="longitude",y="latitude",alpha=0.1) # alpha设为0.1，就可以看出数据点的密度
+or
+df.plot(kind="scatter",x="longitude",y=" latitude",alpha=0.6,
+            s=train_set[" population"]/100, label="population",
+             c=" medianHouseValue",cmap=plt.get_cmap("jet"),sharex=False)
 
 # 饼图
 df.plot.pie(subplots=True, figsize=(8, 4))
