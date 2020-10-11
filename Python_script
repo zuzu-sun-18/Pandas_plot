@@ -25,9 +25,6 @@ plt.show()
 # 加入kind=’bar’（垂直柱状图）或kind=’barh’（水平柱状图）
 df.plot(kind='bar')
 
-# 箱线图
-df.plot.box()
-
 # 散点图
 df.plot.scatter(x='a', y='b')
 or
@@ -39,3 +36,8 @@ df.plot(kind="scatter",x="longitude",y=" latitude",alpha=0.6,
 
 # 饼图
 df.plot.pie(subplots=True, figsize=(8, 4))
+
+# boxplot 箱型图
+df.boxplot(column='Age', showfliers=False)
+
+
