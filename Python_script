@@ -17,6 +17,15 @@ data['Age'].plot(kind='hist', bins=70, ax=axis1)
 data['Age'].plot(kind='hist', bins=70, ax=axis2)
 plt.show()
 
+or
+
+plt.figure(figsize=(12,5))
+plt.subplot(121)
+df.hist(bins=70)
+plt.subplot(122)
+df.boxplot(column='Age', showfliers=False)
+plt.show()
+
 # 线型图
 series.plot(linestyle='dashed', color='k', marker='o')
 plt.show()
