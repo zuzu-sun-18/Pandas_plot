@@ -48,5 +48,9 @@ df.plot.pie(subplots=True, figsize=(8, 4))
 
 # boxplot 箱型图
 df.boxplot(column='Age', showfliers=False)
+sns.boxplot(x="color",y="pl",data=data,hue="catagory")
+
+# violinplot 小提琴图
+sns.violinplot("Pclass", "Age", hue="Survived", data=train_data, split=True)
 
 
