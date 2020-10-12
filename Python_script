@@ -53,4 +53,13 @@ sns.boxplot(x="color",y="pl",data=data,hue="catagory")
 # violinplot 小提琴图
 sns.violinplot("Pclass", "Age", hue="Survived", data=train_data, split=True)
 
+# heatmap 热图
+Correlation = pd.DataFrame
+(data[['Survived', 'Pclass', 'IsAlone', 'Sex_Code']])
+colormap = plt.cm.viridis
+plt.figure(figsize=(14,12))
+plt.title('Pearson Correlation of Features', y=1.05, size=15)
+sns.heatmap(Correlation.astype(float).corr(),linewidths=0.1,vmax=1.0, square=True, cmap=colormap, linecolor='white', annot=True)
+plt.show()
+
 
